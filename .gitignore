@@ -1,0 +1,48 @@
+# ============================================================
+# BizSafi Backend — .gitignore
+# ============================================================
+
+# --- Environment & Secrets (NEVER commit these) ---
+.env
+*.env
+.env.*
+!.env.example       # Keep the template — exclude the real values
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.whl
+
+# --- Virtual environments ---
+venv/
+.venv/
+env/
+ENV/
+
+# --- Testing ---
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# --- IDEs ---
+.idea/
+.vscode/
+*.swp
+*.swo
+*.DS_Store
+
+# --- Alembic (generated migrations committed, temp files not) ---
+alembic/versions/__pycache__/
+
+# --- Logs ---
+*.log
+logs/
