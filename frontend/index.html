@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BizSafi Dashboard</title>
+  <link rel="stylesheet" href="/frontend/styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <div>
+        <h1>BizSafi Dashboard</h1>
+        <p class="muted">API: <code id="api-base"></code></p>
+      </div>
+      <div class="status-group">
+        <span class="pill" id="auth-state">Not authenticated</span>
+        <button id="logout-btn" class="secondary">Logout</button>
+      </div>
+    </header>
+
+    <section class="card">
+      <h2>Authentication</h2>
+      <div class="grid three">
+        <label>Name<input id="name" placeholder="Tristan" value="Tristan" /></label>
+        <label>Email<input id="email" placeholder="tristan@test.com" value="tristan@test.com" /></label>
+        <label>Password<input id="password" type="password" value="SecurePass123!" /></label>
+      </div>
+      <div class="actions">
+        <button id="register-btn">Register</button>
+        <button id="login-btn">Login</button>
+        <button id="me-btn" class="secondary">Profile</button>
+      </div>
+    </section>
+
+    <div class="layout">
+      <section class="card">
+        <h2>Businesses</h2>
+        <div class="grid">
+          <label>Business Name<input id="biz-name" value="Tristan Salon" /></label>
+          <label>Category<input id="biz-category" value="Salon" /></label>
+          <label>Location<input id="biz-location" value="Nairobi" /></label>
+        </div>
+        <div class="actions">
+          <button id="create-business-btn">Create</button>
+          <button id="list-business-btn" class="secondary">Refresh</button>
+        </div>
+        <div id="business-list" class="list"></div>
+      </section>
+
+      <section class="card">
+        <h2>Operations</h2>
+        <div class="grid">
+          <label>Selected Business ID<input id="business-id" placeholder="1" /></label>
+          <label>Sale Amount<input id="sale-amount" value="2500" /></label>
+          <label>Stock Item<input id="stock-item" value="Shampoo 500ml" /></label>
+        </div>
+        <div class="actions">
+          <button id="add-sale-btn">Add Sale</button>
+          <button id="add-stock-btn">Add Stock</button>
+          <button id="add-reminder-btn">Add Reminder</button>
+          <button id="summary-btn" class="secondary">Today's Summary</button>
+        </div>
+      </section>
+    </div>
+
+    <section class="card">
+      <h2>Activity Log</h2>
+      <pre id="output"></pre>
+    </section>
+  </main>
+
+  <script src="/frontend/app.js"></script>
+</body>
+</html>
